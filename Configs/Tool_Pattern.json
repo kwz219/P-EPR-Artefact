@@ -1,0 +1,23 @@
+{
+  "TBar": ["Cast","Operator","Super","Array","Invocation","Literal","DataType","Return"],
+  "SimFix": ["Operator","DataType","Literal","Invocation"],
+  "kPAR": ["Cast","Array","DataType","Operator","Invocation"],
+  "jMutRepair": ["Operator"],
+  "FixMiner": ["DataType","Operator"],
+  "AVATAR": ["Cast","Array","Super","Operator","DataType"],
+  "ACS": ["Operator"],
+  "Nopol": ["Operator"],
+  "DynaMoth": ["Operator"],
+  "RSRepair-A": ["None"],
+  "Kali-A": ["None"],
+  "Cardumen": ["None"],
+  "jKali": ["None"],
+  "jGenProg": ["None"],
+  "GenProg-A": ["None"],
+  "ARJA": ["None"],
+  "RewardRepair": ["None"],
+  "SequenceR": ["None"],
+  "CodeBERT": ["None"],
+  "Recoder": ["None"],
+  "TransplantFix": ["None"]
+}
