@@ -22,13 +22,21 @@ This repository contains artifacts of the paper.
 ```
 
 ## The P-EPR Framework
-![TransplantFix_architecture](./Figs/P-EPR-Framework.PNG)
+![PEPR_architecture](./Figs/P-EPR-Framework.PNG)
 
 We propose a Preference-based Ensemble Program Repair framework (**P-EPR**),
 which aims to efficiently assemble existing diverse APR tools. The term `preference' refers to the features of bugs that can be more readily addressed by a given tool than others, i.e., the tool has a higher probability to generate a correct fix for that kind of bug. 
 For a given bug, **P-EPR** ranks available tools by quantifying each tool's preference score based on computed mappings of tools' preferences.
 
+## Scoring Algorithm of P-EPR
+![PEPR_architecture](./Figs/ScoreAlgorithm.png)
+
+This pseudocode describes how P-EPR computes preference scores of available APR tools
+(corresponding to section 3.3 of the paper).
+
+
+
 ## Running P-EPR
 ### Step 1. Configuring Available APR tools 
 
-### Step 2. Ranks APR tools for the input bug (a buggy class file along with the suspicious line id)
+### Step 2. Ranking APR tools for the input bug (a buggy class file along with the suspicious line id)
