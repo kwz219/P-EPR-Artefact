@@ -36,7 +36,8 @@ This pseudocode describes how P-EPR computes preference scores of available APR 
 
 
 
-## Running P-EPR
-### Step 1. Configuring Available APR tools 
+## Instructions for use P-EPR
+### Initialize
 
-### Step 2. Ranking APR tools for the input bug (a buggy class file along with the suspicious line id)
+### Inference (for example)
+> java -jar BugFeaturer.jar --tool_config_dir <tool_config_dir> --input_file <path of the buggy class file> --faulty_line_ids <suspicious_line_locations> --test_err_type <test_err_type> --result_file <the_path_to_store_predict_results_of_P-EPR> --log_dir <path_to_store_logs>
