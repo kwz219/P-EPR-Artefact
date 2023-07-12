@@ -1,0 +1,19 @@
+{
+	"tool_name":"TBar",
+	"explicit_preferences":[
+		"Cast",
+		"Operator",
+		"Super",
+		"Array",
+		"Invocation",
+		"Literal",
+		"DataType",
+		"Return"
+	],
+	"total_fixed_count":0,
+	"total_failed_count":0,
+	"history_preferences":{
+		"type_history":{},
+		"test_history":{}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"tool_name":"TBar",
+	"explicit_preferences":[
+		"Cast",
+		"Operator",
+		"Super",
+		"Array",
+		"Invocation",
+		"Literal",
+		"DataType",
+		"Return"
+	],
+	"total_fixed_count":1,
+	"total_failed_count":0,
+	"history_preferences":{
+		"type_history":{
+			"class spoon.support.reflect.code.CtLocalVariableImpl":[
+				2,
+				1
+			]
+		},
+		"test_history":{
+			
+		}
+	}
+}

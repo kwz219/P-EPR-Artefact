@@ -1,0 +1,274 @@
+{
+	"tool_name":"kPAR",
+	"explicit_preferences":[
+		"Cast",
+		"Array",
+		"DataType",
+		"Operator",
+		"Invocation"
+	],
+	"total_fixed_count":63,
+	"total_failed_count":1212,
+	"history_preferences":{
+		"type_history":{
+			"class spoon.support.reflect.code.CtFieldReadImpl":[
+				2,
+				21
+			],
+			"class spoon.support.reflect.code.CtConditionalImpl":[
+				1,
+				3
+			],
+			"class spoon.support.reflect.code.CtVariableReadImpl":[
+				2,
+				31
+			],
+			"class spoon.support.reflect.code.CtTypeAccessImpl":[
+				1,
+				7
+			],
+			"class spoon.support.reflect.code.CtCaseImpl":[
+				1,
+				13
+			],
+			"class spoon.support.reflect.declaration.CtFieldImpl":[
+				1,
+				7
+			],
+			"class spoon.support.reflect.code.CtAssignmentImpl":[
+				5,
+				136
+			],
+			"class spoon.support.reflect.code.CtLiteralImpl":[
+				1,
+				21
+			],
+			"class spoon.support.reflect.code.CtBlockImpl":[
+				1,
+				5
+			],
+			"class spoon.support.reflect.code.CtThrowImpl":[
+				1,
+				19
+			],
+			"class spoon.support.reflect.code.CtInvocationImpl":[
+				16,
+				213
+			],
+			"class spoon.support.reflect.code.CtBinaryOperatorImpl":[
+				13,
+				221
+			],
+			"class spoon.support.reflect.code.CtLocalVariableImpl":[
+				14,
+				210
+			],
+			"class spoon.support.reflect.code.CtOperatorAssignmentImpl":[
+				2,
+				19
+			],
+			"class spoon.support.reflect.declaration.CtMethodImpl":[
+				1,
+				2
+			],
+			"class spoon.support.reflect.code.CtUnaryOperatorImpl":[
+				3,
+				38
+			],
+			"class spoon.support.reflect.code.CtArrayWriteImpl":[
+				1,
+				2
+			],
+			"class spoon.support.reflect.declaration.CtParameterImpl":[
+				1,
+				11
+			],
+			"class spoon.support.reflect.code.CtContinueImpl":[
+				2,
+				4
+			],
+			"class spoon.support.reflect.reference.CtArrayTypeReferenceImpl":[
+				1,
+				2
+			],
+			"class spoon.support.reflect.code.CtConstructorCallImpl":[
+				1,
+				6
+			],
+			"class spoon.support.reflect.code.CtArrayReadImpl":[
+				1,
+				2
+			],
+			"class spoon.support.reflect.declaration.CtAnnotationImpl":[
+				1,
+				2
+			],
+			"class spoon.support.reflect.code.CtCommentImpl":[
+				1,
+				55
+			],
+			"class spoon.support.reflect.code.CtReturnImpl":[
+				14,
+				175
+			],
+			"class spoon.support.reflect.code.CtIfImpl":[
+				1,
+				2
+			],
+			"class spoon.support.reflect.declaration.CtTypeParameterImpl":[
+				1,
+				3
+			],
+			"class spoon.support.reflect.code.CtCatchVariableImpl":[
+				1,
+				3
+			],
+			"class spoon.support.reflect.code.CtVariableWriteImpl":[
+				1,
+				4
+			],
+			"class spoon.support.reflect.code.CtBreakImpl":[
+				1,
+				5
+			]
+		},
+		"test_history":{
+			"java.lang.IllegalStateException":[
+				1,
+				11
+			],
+			"java.lang.IndexOutOfBoundsException":[
+				1,
+				6
+			],
+			"java.lang.StackOverflowError":[
+				1,
+				7
+			],
+			"org.apache.commons.math.MathException":[
+				2,
+				1
+			],
+			"java.lang.ClassCastException":[
+				2,
+				10
+			],
+			"java.lang.NullPointerException":[
+				8,
+				28
+			],
+			"org.mockito.exceptions.base.MockitoException":[
+				1,
+				5
+			],
+			"org.apache.commons.math.ConvergenceException":[
+				1,
+				9
+			],
+			"org.apache.commons.math.exception.NotStrictlyPositiveException":[
+				2,
+				1
+			],
+			"org.apache.commons.math.exception.TooManyEvaluationsException":[
+				1,
+				4
+			],
+			"org.apache.commons.math.MaxIterationsExceededException":[
+				1,
+				3
+			],
+			"org.apache.commons.math.optimization.direct.BOBYQAOptimizer$PathIsExploredException":[
+				1,
+				5
+			],
+			"junit.framework.ComparisonFailure":[
+				15,
+				152
+			],
+			"org.mockito.internal.creation.instance.InstantationException":[
+				1,
+				5
+			],
+			"java.lang.UnsupportedOperationException":[
+				1,
+				8
+			],
+			"org.mockito.exceptions.misusing.MissingMethodInvocationException":[
+				1,
+				8
+			],
+			"java.lang.StringIndexOutOfBoundsException":[
+				2,
+				12
+			],
+			"org.apache.commons.math3.exception.ConvergenceException":[
+				1,
+				30
+			],
+			"java.lang.NumberFormatException":[
+				1,
+				11
+			],
+			"org.joda.time.IllegalFieldValueException":[
+				2,
+				6
+			],
+			"java.lang.ArrayIndexOutOfBoundsException":[
+				2,
+				18
+			],
+			"java.io.NotSerializableException":[
+				1,
+				11
+			],
+			"java.lang.RuntimeException":[
+				3,
+				9
+			],
+			"org.apache.commons.math3.exception.MaxCountExceededException":[
+				1,
+				17
+			],
+			"java.lang.IllegalArgumentException":[
+				1,
+				57
+			],
+			"java.lang.Exception":[
+				1,
+				17
+			],
+			"org.apache.commons.math3.fraction.FractionConversionException":[
+				1,
+				3
+			],
+			"org.apache.commons.lang3.SerializationException":[
+				1,
+				2
+			],
+			"org.apache.commons.math.MathRuntimeException$4":[
+				1,
+				3
+			],
+			"org.apache.commons.math.MathRuntimeException$6":[
+				1,
+				5
+			],
+			"org.apache.commons.lang.SerializationException":[
+				1,
+				3
+			],
+			"java.lang.ArrayStoreException":[
+				1,
+				4
+			],
+			"org.jfree.data.UnknownKeyException":[
+				1,
+				5
+			],
+			"java.lang.OutOfMemoryError":[
+				1,
+				7
+			]
+		}
+	}
+}
