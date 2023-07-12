@@ -24,13 +24,35 @@ This repository contains artifacts of the paper.
 ├── README.md
 
 ```
+## The P-EPR Framework
+![PEPR_architecture](./Figs/P-EPR-Framework.PNG)
 
+We propose a Preference-based Ensemble Program Repair framework (**P-EPR**),
+which aims to efficiently assemble existing diverse APR tools. The term `preference' refers to the features of bugs that can be more readily addressed by a given tool than others, i.e., the tool has a higher probability to generate a correct fix for that kind of bug. 
+For a given bug, **P-EPR** ranks available tools by quantifying each tool's preference score based on computed mappings of tools' preferences.
 
 
 ## Instructions for use P-EPR
 Requirements: Java version 11.0.13 (for executing Spoon)
 
+### Explanations of parameters
+>-mode: initialize or inference. Under the initialize mode, P-EPR initialize/update configured/new tools with given repair history; Under the inference mode, P-RPR receives a buggy class file, as well as the fault_location and test error type (if available) and predicts scores of each configured tools.
+
+>-tool_config_dir: where does P-EPR should load the configurations of tools (both for initialize or inference)
+
+>-save_dir: where to store the tool configurations after initialization
+
+>-repair_history_info: For initialization, a json file that contains the meta information of tools' repair history, including tool name and corresponding repair samples. Each repair sample should provide the fault file location, fault line location, and test_error_type.
+
+>-input_file: For inference, where the buggy file is
+
+>-fault_line_ids: For inference, the faulty line locations of the buggy file. Egs of Line or Lines: (1) for single-line fault: 175 (2) for multi_line faults: 175,176,178 or 175-176,178
+
+>-test_error_type:  For inference, the test error type of the fault. If this information is not available, set it to junit.framework.AssertionFailedError
+
+>-result_file: For inference, the position to store the predicts results. It is a json file that records the preference scores of each configured tools in P-EPR 
+
 ### Initialize 
 > java -jar ./ToolRanker.jar -mode initialize -save_dir ./P-EPR-egs/Initialize/tool_configs_initialized -tool_config_dir ./P-EPR-egs/Initialize/tool_configs_original -repair_history_info ./P-EPR-egs/Initialize/DatasetInfo.json -log_dir ./P-EPR-egs/Initialize
 ### Inference 
-> java -jar ./Ranker.jar -mode inference -tool_config_dir ./P-EPR-egs/Inference/D4j_trained_tools -result_file ./result.json -input_file ./P-EPR-egs/infer_rg.java -faulty_line_ids 175 -test_err_type junit.framework.AssertionFailedError
+> java -jar ./ToolRanker.jar -mode inference -tool_config_dir ./P-EPR-egs/Inference/D4j_trained_tools -result_file ./result.json -input_file ./P-EPR-egs/infer_rg.java -faulty_line_ids 175 -test_err_type junit.framework.AssertionFailedError

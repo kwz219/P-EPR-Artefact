@@ -1,6 +1,7 @@
 package Util;
 
-import org.json.JSONObject;
+
+import com.alibaba.fastjson.JSONObject;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,9 +9,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class Defects4JDataInfo {
-    public ArrayList<String> multi_file_bug_ids=new ArrayList();
+    public ArrayList<String> multi_file_bug_ids = new ArrayList();
     public JSONObject infos;
-    public  Defects4JDataInfo(){
+
+    public Defects4JDataInfo() {
         this.multi_file_bug_ids.add("Chart_14");
         this.multi_file_bug_ids.add("Chart_18");
         this.multi_file_bug_ids.add("Closure_30");
@@ -42,23 +44,16 @@ public class Defects4JDataInfo {
         this.multi_file_bug_ids.add("Time_12");
 
 
-
-
-
     }
 
     /**
      * loads the basic information of Defects4j (including buggy line ids, failed test results....)
+     *
      * @param info_json_f
      */
-    public void init_information(String info_json_f){
-        try {
-            String result = new String(Files.readAllBytes(Paths.get(info_json_f)));
-            JSONObject json_result = new JSONObject(result);
-            this.infos=json_result;
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    public void init_information(String info_json_f) {
+        this.infos = IO.readJsonFile(info_json_f);
+
     }
 
 }

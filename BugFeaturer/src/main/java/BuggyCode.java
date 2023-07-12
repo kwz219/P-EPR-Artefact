@@ -31,9 +31,10 @@ public class BuggyCode {
         this.buggy_parent = buggy_parent;
     }
 
-    public void addBuggyElement(CtElement buggy_element){
+    public void addBuggyElement(CtElement buggy_element) {
         this.buggy_elements.add(buggy_element);
     }
+
     public void setBuggyMethod(CtMethod buggy_method) {
         this.buggy_method = buggy_method;
     }
@@ -42,17 +43,17 @@ public class BuggyCode {
         return this.buggy_method;
     }
 
-    public void printInfo(){
-        if(this.buggy_method==null){
+    public void printInfo() {
+        if (this.buggy_method == null) {
             System.out.println("buggy_constructor: " + this.buggy_constructor.getSignature());
-        }else {
+        } else {
             System.out.println("buggy_method: " + this.buggy_method.getSimpleName());
         }
-        if(!this.buggy_parent.equals(null)){
-            System.out.println("buggy_parent: "+this.buggy_parent.toString());
+        if (!this.buggy_parent.equals(null)) {
+            System.out.println("buggy_parent: " + this.buggy_parent.toString());
         }
-        for(CtElement ele:this.buggy_elements){
-            System.out.println("buggy_element: "+ele.toString());
+        for (CtElement ele : this.buggy_elements) {
+            System.out.println("buggy_element: " + ele.toString());
         }
     }
 
