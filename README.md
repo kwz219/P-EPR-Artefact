@@ -42,7 +42,7 @@ Requirements: Java version 11.0.13 (for executing Spoon)
 
 >-save_dir: where to store the tool configurations after initialization
 
->-repair_history_info: For initialization, a json file that contains the meta information of tools' repair history, including tool name and corresponding repair samples. Each repair sample should provide the fault file location, fault line location, and test_error_type.
+>-repair_history_info: For initialization, a json file that contains the meta information of tools' repair history, including tool which requires initialization or update and a list of repair samples. Each repair sample should provide the fault file location, fault line location, and test_error_type.
 
 >-input_file: For inference, where the buggy file is
 
