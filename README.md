@@ -56,3 +56,66 @@ Requirements: Java version 11.0.13 (for executing Spoon)
 > java -jar ./ToolRanker.jar -mode initialize -save_dir ./P-EPR-egs/Initialize/tool_configs_initialized -tool_config_dir ./P-EPR-egs/Initialize/tool_configs_original -repair_history_info ./P-EPR-egs/Initialize/DatasetInfo.json -log_dir ./P-EPR-egs/Initialize
 ### Inference 
 > java -jar ./ToolRanker.jar -mode inference -tool_config_dir ./P-EPR-egs/Inference/D4j_trained_tools -result_file ./result.json -input_file ./P-EPR-egs/infer_rg.java -faulty_line_ids 175 -test_err_type junit.framework.AssertionFailedError
+### Integrating New Tools
+write a json file as the following format:
+
+>{
+	"tool_name":"tool_name",
+	"explicit_preferences":[
+		"Cast",
+		"Operator",
+		"Super",
+		"Array",
+		"Invocation",
+		"Literal",
+		"DataType",
+		"Return"
+	],
+	"total_fixed_count":1,
+	"total_failed_count":0,
+	"history_preferences":{
+		"type_history":{
+		},
+		"test_history":{
+		}
+	}
+}
+
+"explicit_preferences" refs to the repair patterns of the tool, we have summarized patterns of 21 tools, please ref to ./P-EPR-egs/Inference/D4j_trained_tools.
+If your new tool has implemented some of our patterns, just provide the pattern keywords.
+And the mapping of keywords and repair patterns are as following:
+
+| Keyword    | Repair Pattern     | Implemented Systems    |
+| -------- | -------- | -------- |
+| "Cast" | P1 Insert Cast Checker | Heuristic-based: HDRepair, SimFix, CapGen; Template-based: AVATAR, Genesis, kPAR, SketchFix, TBar, SOFix |
+| "Operator" |P11 Mutate Operators | Heuristic-based: CapGen, HDRepair, ssFix, SimFix; Template-based: AVATAR, Elixir, FixMiner, kPAR, jMutRepair, SOFix. SketchFix, TBar;Constraint-based: S3|
+| "Super" | P5 Mutate Class Instance Creation | Template-based: AVATAR, TBar |
+| "Array" | P3 Insert Range Checker | Template-based: AVATAR, Elixir, kPAR, SketchFix, TBar, SOFix |
+| "Invocation" | P10 Mutate Method Invocation Expression | Heuristic-based: CapGen, HDRepair, SOFix, ssFix, SimFix; Template-based: Elixir, FixMiner, kPAR, SketchFix, SOFix, TBar |
+| "Literal" | P9 Mutate Literal Expression | Heuristic-based: CapGen, HDRepair, SimFix, ssFix; Template-based: FixMiner, TBar ; Constraint-based: S3 |
+| "DataType" | P7 Mutate Data Type | Heuristic-based: CapGen, SimFix; Tempate-based: AVATAR,SOFix, Elixir, FixMiner, kPAR, TBar |
+| "Return" | P12 Mutate Return Statement | Template-based: Elixir, SketchFix, TBar; Heuristic-based: HDRepair |
+| "Division" | P8 Mutate Integer Division Operation |Template-based: TBar|
+| "Exception" | P4 Throw Exception|Constraint-based: ACS |
+| "None" | no preferred patterns | Tools that have no patterns, e.g., most of the learning-based systems |
+
+### Integrating New Repair Patterns
+Modify the file BugFeaturer/src/main/java/Preference/TypePreference.java
+
+Easily add a new judgement of your new patterns through defining four objects:
+>element_check: need to check the type of the buggy statement
+
+>check_type: what the elements should contain
+
+>child_check: need to check all the child nodes of the buggy statement
+ 
+>child_check_types: what the childs of the buggy statment should contain
+
+For example, the pattern "Array" should check whether the child nodes of the buggy statement involves with ArrayWrite or ArrayRead 
+![pattern_add](./Figs/pattern_add.png)
+
+For the complete meta code model used by spoon (the name of each code elements), please check https://spoon.gforge.inria.fr/code_elements.html.
+
+![spoon_model](./Figs/spoon_model.png)
+### an example of a tool initialized in P-EPR
+![configured_tools](./Figs/tool_configuration_example.PNG)
