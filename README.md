@@ -1,6 +1,6 @@
 # Practical Program Repair via Preference-based Ensemble Strategy
 
-This repository contains artifacts of the paper.
+This repository contains artifacts of the ICSE2024 early paper "Practical Program Repair via Preference-based Ensemble Strategy".
 
 ## Structure
 ```yaml
