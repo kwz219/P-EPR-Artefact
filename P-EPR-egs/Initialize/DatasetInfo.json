@@ -1,0 +1,8 @@
+{
+  "TBar": [
+    {"file_path":"E:\\APR\\FL-VS-APR-master\\FL-VS-APR-master\\data\\BuggyFiles\\Chart_11\\source\\org\\jfree\\chart\\util\\ShapeUtilities.java",
+    "fault_location":"275",
+    "repair_result": "Correct",
+    "test_error_type": "junit.framework.AssertionFailedError"}
+  ]
+}
