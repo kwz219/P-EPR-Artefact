@@ -1,6 +1,6 @@
 {
   "TBar": [
-    {"file_path":"./D4j_files/\\Chart_11\\source\\org\\jfree\\chart\\util\\ShapeUtilities.java",
+    {"file_path":"./D4j_files/Chart_11/source/org/jfree/chart/util/ShapeUtilities.java",
     "fault_location":"275",
     "repair_result": "Correct",
     "test_error_type": "junit.framework.AssertionFailedError"}
