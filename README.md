@@ -32,7 +32,7 @@ which aims to efficiently assemble existing diverse APR tools. The term `prefere
 For a given bug, **P-EPR** ranks available tools by quantifying each tool's preference score based on computed mappings of tools' preferences.
 
 
-## Instructions for use P-EPR
+## Instructions for using P-EPR
 Requirements: Java version 11.0.13 (for executing Spoon)
 
 ### Explanations of parameters
